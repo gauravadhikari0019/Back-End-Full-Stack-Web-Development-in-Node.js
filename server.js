@@ -1,14 +1,5 @@
-const http = require('http');
+import app from "./index.js";
 
-const hostname = '127.0.0.1'; // localhost
-const port = 8080;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Response received at port 8080.');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}`);
+app.listen(3000, (req, res) => {
+  console.log("server is listening at port 3000");
 });
